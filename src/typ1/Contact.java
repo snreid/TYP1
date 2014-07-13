@@ -67,7 +67,8 @@ abstract public class Contact {
     
     
     public String toString(){
-        return "ID: "+this.getId()+"\n"+"name: "+this.getFirstName()+" "+this.getLastName();
+        return "ID: "+this.getId()+"\n"+"name: "+this.getFirstName()+" "+this.getLastName()
+                +"\nAddress: "+this.getAddress()+"\nPhone Number: "+this.getPhoneNumber()+"\nEmail: "+this.getEmail();
     }
 
 }

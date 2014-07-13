@@ -29,6 +29,6 @@ public class PersonalContact extends Contact{
     }
     
     public String toString(){
-        return super.toString();    
+        return super.toString() + "\nBirthdate: " + this.getBirthdate();    
     }
 }
