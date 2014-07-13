@@ -15,7 +15,6 @@ import java.io.*;
  * @author sarah
  */
 public class TYP1 {
-    public static int incrementer = 0;
     public static ArrayList<Contact> contactList = new ArrayList();
     /**
      * @param args the command line arguments
@@ -27,7 +26,7 @@ public class TYP1 {
         String input;
         
         do{
-            System.out.println("**** MENU ****");
+            System.out.println("**** MAIN MENU ****");
             System.out.println("1. Enter New Business Contact");
             System.out.println("2. Enter New Personal Contact");
             System.out.println("3. View All Contacts");
@@ -40,11 +39,11 @@ public class TYP1 {
                 break; 
             }
             else if(input.equals("1")){
-                BusinessContact b = new BusinessContact(keyboard, setNewRecordID());
+                BusinessContact b = new BusinessContact(keyboard);
                 contactList.add(b);
             }
             else if(input.equals("2")){
-                PersonalContact p = new PersonalContact(keyboard, setNewRecordID());
+                PersonalContact p = new PersonalContact(keyboard);
                 contactList.add(p);
             }
             else if (input.equals("3")){
@@ -68,10 +67,6 @@ public class TYP1 {
             
         }while( !input.equals("quit") && !input.equals("q") );
 
-    }
-    public static int setNewRecordID(){
-        incrementer++;
-        return incrementer;
     }
     
 }

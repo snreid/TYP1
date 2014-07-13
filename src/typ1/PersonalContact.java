@@ -19,8 +19,8 @@ public class PersonalContact extends Contact{
     public String getBirthdate(){ return birthdate; }
     public void setBirthdate(String newValue){ birthdate = newValue; }
     
-    PersonalContact(BufferedReader keyboard, int id) throws IOException{
-        super(keyboard, id);
+    PersonalContact(BufferedReader keyboard) throws IOException{
+        super(keyboard);
         String input;
         
         System.out.println("Birthdate: ");

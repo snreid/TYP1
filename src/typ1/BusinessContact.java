@@ -15,8 +15,8 @@ import java.io.*;
  * @author sarah
  */
 public class BusinessContact extends Contact {
-    BusinessContact(BufferedReader keyboard, int id) throws IOException{
-        super(keyboard, id);
+    BusinessContact(BufferedReader keyboard) throws IOException{
+        super(keyboard);
         
         String input;
         
@@ -42,9 +42,4 @@ public class BusinessContact extends Contact {
     }
     
     
-    
-    public void extraAttributes(BufferedReader keyboard) throws IOException{
-        
-        
-    }
 }

@@ -16,10 +16,6 @@ import java.io.*;
  * @author sarah
  */
 abstract public class Contact {
-    private int id;
-    public void setId(int newValue){ id = newValue; }
-    public int getId(){ return id; }
-    
     private String firstName;
     public String getFirstName(){ return firstName; }
     public void setFirstName(String newValue){ firstName = newValue;}
@@ -41,7 +37,7 @@ abstract public class Contact {
     public void setEmail(String newValue){ email = newValue; }
     
     
-    Contact (BufferedReader keyboard, int id) throws IOException {
+    Contact (BufferedReader keyboard) throws IOException {
         String input;
 
         System.out.println("First Name: ");
@@ -67,7 +63,7 @@ abstract public class Contact {
     
     
     public String toString(){
-        return "ID: "+this.getId()+"\n"+"name: "+this.getFirstName()+" "+this.getLastName()
+        return "\n"+"name: "+this.getFirstName()+" "+this.getLastName()
                 +"\nAddress: "+this.getAddress()+"\nPhone Number: "+this.getPhoneNumber()+"\nEmail: "+this.getEmail();
     }
 
