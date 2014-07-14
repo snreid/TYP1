@@ -15,7 +15,18 @@ import java.io.*;
  * @author sarah
  */
 public class BusinessContact extends Contact {
+    //Initializing BusinessContact specific attributes with getters and setters.
+    private String jobTitle;
+    public String getJobTitle(){ return jobTitle; }
+    public void setJobTitle(String newValue){ jobTitle = newValue; }
+    
+    private String organization;
+    public String getOrganization(){ return organization; }
+    public void setOrganization( String newValue ){ organization = newValue; }
+    
+    
     BusinessContact(BufferedReader keyboard) throws IOException{
+        //Requesting info from user on BusinessContact specific attributes after super() has run.
         super(keyboard);
         
         String input;
@@ -29,16 +40,11 @@ public class BusinessContact extends Contact {
         this.setOrganization(input);
     };
     
-    private String jobTitle;
-    public String getJobTitle(){ return jobTitle; }
-    public void setJobTitle(String newValue){ jobTitle = newValue; }
     
-    private String organization;
-    public String getOrganization(){ return organization; }
-    public void setOrganization( String newValue ){ organization = newValue; }
     
     public String toString(){
-       return super.toString()+"\nJob Title: "+this.getJobTitle()+"\nOrganization: "+this.getOrganization()+"\n";
+        //Outputting BusinessContact specific attributes. Appended to super.
+       return "Type: Business Contact\n"+super.toString()+"\nJob Title: "+this.getJobTitle()+"\nOrganization: "+this.getOrganization()+"\n";
     }
     
     

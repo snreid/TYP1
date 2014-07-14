@@ -16,6 +16,7 @@ import java.io.*;
  * @author sarah
  */
 abstract public class Contact {
+    //Initializing common attributes of contacts with getters and setters.
     private String firstName;
     public String getFirstName(){ return firstName; }
     public void setFirstName(String newValue){ firstName = newValue;}
@@ -38,6 +39,7 @@ abstract public class Contact {
     
     
     Contact (BufferedReader keyboard) throws IOException {
+        //Requesting input from user when new contact is created.
         String input;
 
         System.out.println("First Name: ");
@@ -63,7 +65,8 @@ abstract public class Contact {
     
     
     public String toString(){
-        return "\n"+"name: "+this.getFirstName()+" "+this.getLastName()
+        //Common attributes of contacts to string.
+        return "Name: "+this.getFirstName()+" "+this.getLastName()
                 +"\nAddress: "+this.getAddress()+"\nPhone Number: "+this.getPhoneNumber()+"\nEmail: "+this.getEmail();
     }
 
