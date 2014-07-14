@@ -38,7 +38,7 @@ public class BusinessContact extends Contact {
     public void setOrganization( String newValue ){ organization = newValue; }
     
     public String toString(){
-       return super.toString()+"\nJob Title: "+this.getJobTitle()+"\nOrganization: "+this.getOrganization();
+       return super.toString()+"\nJob Title: "+this.getJobTitle()+"\nOrganization: "+this.getOrganization()+"\n";
     }
     
     
